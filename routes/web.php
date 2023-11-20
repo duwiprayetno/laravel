@@ -14,32 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view ('pertemuan4/home');
+    return view ('home');
 
 });
 
-Route::get('pertemuan4/about', function () {
+Route::get('about', function () {
     $nama = 'DUWI PRAYETNO';
-    return view ('pertemuan4/about');
+    return view ('about');
     
 });
 
-Route::get('pertemuan4/profile', function () {
-    return view ('pertemuan4/profile');
+Route::get('profile', function () {
+    return view ('profile');
     
 });
 
-Route::get('pertemuan4/mahasiswa', function () {
-    return view ('pertemuan4/mahasiswa');
+Route::get('mahasiswa', function () {
+    return view ('mahasiswa');
     
 });
 
 Route::get('pertemuan4/tugas', function () {
     return view ('pertemuan4/tugas');
     
-});
-
-Route::get('/', function () {
-    return view ('pertemuan4/home');
-
 });
