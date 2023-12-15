@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\mahasiswaController2;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
     return view ('home');
 
@@ -33,8 +35,6 @@ Route::get('mahasiswa', function () {
     return view ('mahasiswa');
     
 });
+*/
 
-Route::get('pertemuan4/tugas', function () {
-    return view ('pertemuan4/tugas');
-    
-});
+Route::resource('/',mahasiswaController2::class);
