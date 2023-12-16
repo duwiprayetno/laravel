@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\mahasiswa;
 use Illuminate\Http\Request;
 
 class mahasiswaController2 extends Controller
@@ -37,6 +38,16 @@ class mahasiswaController2 extends Controller
     public function store(Request $request)
     {
         //menyimpan data 
+        $data = [
+            'npm' => $request ['npm'],
+            'nama_mahasiswa' =>$request ['nama'],
+            'tgl_lahir' => $request ['tgl_lahir'],
+            'JK' => $request ['jk'],
+            'alamat' => $request['alamat'],
+        ];
+
+        mahasiswa::create($data);
+        return redirect()->to('/');
     }
 
     /**
